@@ -1,0 +1,17 @@
+{
+    "0": {
+        "question": "Kto jest głównym bohaterem serialu \"Świat według Kiepskich\"?",
+        "answers": ["Ferdynand Kiepski", "Mariola Kiepska", "Janusz Paździoch", "Jolanta Kiepska"],
+        "correct": "Ferdynand Kiepski"
+    },
+    "1": {
+        "question": "O której godzinie zmarł Jan Paweł II?",
+        "answers": ["16:49", "10:32", "23:47", "21:37"],
+        "correct": "21:37"
+    },
+    "2": {
+        "question": "Kiedy została założona firma Google (Google LLC)?",
+        "answers": ["17 marca 2001", "30 maja 1997", "4 września 1998", "21 grudnia 1995"],
+        "correct": "4 września 1998"
+    }
+}
