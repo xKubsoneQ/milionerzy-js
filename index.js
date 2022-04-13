@@ -15,10 +15,12 @@ function showQuestion() {
         console.log(`${n++}. ${answer}`);
     });
 
-    readline.question("Wybierz odpowiedź (1-4): ", userAnswer => {
-        const answers = ["1", "2", "3", "4"];
-        if(!answers.includes(userAnswer)) {
-            return console.log("No cóź... Przegrałeś. Wiedziałeś, że wpisujesz złą odpowiedź, miałeś wpisać liczbę od 1 do 4 :) ");
+    readline.question(`Wybierz odpowiedź (1-${q.answers.length}): `, userAnswer => {
+        const answers = q.answers.length;
+        const answerint = parseInt(userAnswer);
+        if(answerint > answers || answerint < 1 || isNaN(answerint)) {
+            readline.close();
+            return console.log(`No cóź... Przegrałeś. Wiedziałeś, że wpisujesz złą odpowiedź, miałeś wpisać liczbę od 1 do ${q.answers.length} :) `);
         }
         else {
             const an = parseInt(userAnswer);

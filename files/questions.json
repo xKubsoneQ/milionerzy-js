@@ -38,5 +38,10 @@
         "question": "Na co Jacek Sasin wydał 70 milionów złotych?",
         "answers": ["na wybory, które się nie odbyły", "na rękawiczki dla medyków", "na respiratory", "na 500+"],
         "correct": "na wybory, które się nie odbyły"
+    },
+    "8": {
+        "question": "Który z poniżej wymienionych miesięcy ma 28 dni?",
+        "answers": ["marzec", "sierpień", "grudzień", "luty", "styczeń"],
+        "correct": "luty"
     }
 }
