@@ -1,9 +1,12 @@
 ### milionerzy-js
-Mały projekt który ma być podróbką popularnego teleturnieju "Milionerzy". Program wymaga pobrania Node.JS.
+Mały projekt który ma być podróbką popularnego teleturnieju "Milionerzy". Program wymaga pobrania `Node.JS` oraz `npm`.
 
 ##### Uruchomienie
-Wpisz `node .` w cmd gdy jesteś w folderze z projektem.
+Wpisz `npm i` w konsoli (musisz być w folderze z projektem) aby pobrać wszystkie wymagane moduły.
+Po pobraniu wpisz `node .` aby uruchomić program.
 
+#### Używane moduły
+- `chalk`
 #### FAQ
 ##### Chcę dodać własne pytanie, ale nie wiem jak to zrobić. Pomożesz?
 Jasne! To bardzo proste, musisz otworzyć plik `questions.json` w jakimkolwiek edytorze tekstowym i dodać do niego pytanie w takim formacie:

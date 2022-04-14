@@ -1,11 +1,12 @@
 const questions = require("./files/questions.json");
 const levels = require("./files/levels.json");
+const c = require("./files/program-config.js");
 const readline = require('readline').createInterface({input: process.stdin, output: process.stdout});
 let userLevel = 1;
 
 const qa = [];
 
-
+console.log(`milionerzy-js, wersja v${c.version}. Miłej gry!\n\n`);
 showQuestion();
 
 
