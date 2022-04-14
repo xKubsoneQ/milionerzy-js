@@ -3,6 +3,8 @@ const levels = require("./files/levels.json");
 const readline = require('readline').createInterface({input: process.stdin, output: process.stdout});
 let userLevel = 1;
 
+const qa = [];
+
 
 showQuestion();
 
@@ -39,6 +41,11 @@ function showQuestion() {
 }
 
 function getQuestion() {
-    const question = questions[Math.floor(Math.random() * Object.keys(questions).length)];
+    const random = Math.floor(Math.random() * Object.keys(questions).length);
+    if(qa.includes(random)) {
+        return getQuestion();
+    }
+    qa.push(random);
+    const question = questions[random];
     return question;
 }
