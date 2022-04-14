@@ -2,23 +2,24 @@ const questions = require("./files/questions.json");
 const levels = require("./files/levels.json");
 const c = require("./files/program-config.js");
 const readline = require('readline').createInterface({input: process.stdin, output: process.stdout});
+const chalk = require("chalk");
 let userLevel = 1;
 
 const qa = [];
 
-console.log(`milionerzy-js, wersja v${c.version}. Miłej gry!\n\n`);
+console.log(chalk.blue(`milionerzy-js, wersja v${c.version}. Miłej gry!\n\n`));
 showQuestion();
 
 
 function showQuestion() {
     let q = getQuestion();
-    console.log(`Pytanie za ${levels[userLevel]}zł: ${q.question}`);
+    console.log(chalk.cyan(`Pytanie za ${levels[userLevel]}zł: ${q.question}`));
     let n = 1;
     q.answers.forEach(answer => {
-        console.log(`${n++}. ${answer}`);
+        console.log(chalk.red(`${n++}. `) + chalk.green(`${answer}`));
     });
 
-    readline.question(`Wybierz odpowiedź (1-${q.answers.length}): `, userAnswer => {
+    readline.question(chalk.magenta(`Wybierz odpowiedź (1-${q.answers.length}): `), userAnswer => {
         const answers = q.answers.length;
         const answerint = parseInt(userAnswer);
         if(answerint > answers || answerint < 1 || isNaN(answerint)) {
