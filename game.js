@@ -19,6 +19,7 @@ module.exports = {
 
 function showQuestion() {
     let q = getQuestion();
+    console.clear()
     console.log(chalk.cyan(`Pytanie za ${levels[userLevel]}zł: ${q.question}`));
     let n = 1;
     q.answers.forEach(answer => {
@@ -57,7 +58,9 @@ function showQuestion() {
                 else {
                     console.log("Dokładnie tak! To prawidłowa odpowiedź! Grajmy dalej!");
                     userLevel++;
-                    showQuestion();
+                    setTimeout( () => {
+                        showQuestion();
+                    }, 3000)
                 };
             };
         }
