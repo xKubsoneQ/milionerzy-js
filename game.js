@@ -10,6 +10,7 @@ const xp = require("./resources/functions/xp.js");
 let userLevel = 1;
 const questionsAnswered = [];
 
+showQuestion()
 
 function showQuestion() {
     console.clear();
@@ -92,6 +93,3 @@ function checkLevelUp() {
         editJson("user/info.json", "money", 2000, "+");
     }
 }
-
-
-showQuestion()
