@@ -18,7 +18,7 @@ Jasne! To bardzo proste, musisz otworzyć plik `questions.json` w jakimkolwiek e
     {
         "question": "pytanie",
         "answers": ["odpowiedź 1", "odpowiedź 2", "odpowiedź 3", "odpowiedź 4"],
-        "correct": "odpowiedź poprawna"
+        "correct": "numer poprawnej odpowiedzi"
     }
 ```
 Potem zapisz plik, i gotowe!
