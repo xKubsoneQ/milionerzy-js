@@ -1,7 +1,6 @@
 const questions = require("./resources/questions.json");
 const levels = require("./resources/levels.json");
 const info = require("./user/info.json");
-const c = require("./resources/program-config.js");
 const editJson = require("./resources/functions/editJson.js");
 const xpToLevel = require("./resources/functions/xpToLevel.js");
 const xp = require("./resources/functions/xp.js");
