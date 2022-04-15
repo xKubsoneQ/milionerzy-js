@@ -1,11 +1,11 @@
 const chalk = require("chalk");
 const fs = require('fs');
 const readline = require('readline').createInterface({input: process.stdin, output: process.stdout});
-const c = require("./resources/program-config.js");
+const package = require("./package.json");
 const editJson = require("./resources/functions/editJson.js");
 
 console.clear();
-console.log(chalk.magenta(`milionerzy-js, wersja v${c.version}.`));
+console.log(chalk.magenta(`milionerzy-js, wersja v${package.version}.`));
 
 if(!fs.existsSync("./user/info.json")) {
     let json = {
