@@ -1,3 +1,3 @@
 module.exports = (level) => {
-    return (level - 1) * 5
+    return level * 5
 }

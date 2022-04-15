@@ -24,45 +24,47 @@ function showQuestion() {
     });
 
     readline.question(chalk.magenta(`Wybierz odpowiedź (1-${answersLength}): `), userAnswer => {
-        readline.close();
-        const answerInt = parseInt(userAnswer);
+        const userAnswerInt = parseInt(userAnswer);
 
-        if(answerInt > answersLength || answerInt < 1 || isNaN(answerInt)) {
-            readline.close();
-            editJson("user/info.json", "money", Math.ceil(levels[userLevel] / 1000), "+");
-            editJson("user/info.json", "xp", xp(userLevel), "+");
+        if(userAnswerInt > answersLength || userAnswerInt < 1 || isNaN(userAnswerInt)) {
+            editJson("user/info.json", "money", Math.ceil(levels[userLevel-1] / 1000), "+");
+            editJson("user/info.json", "xp", xp(userLevel-1), "+");
             console.log(`No cóź... Przegrałeś. Wiedziałeś, że wpisujesz złą odpowiedź, miałeś wpisać liczbę od 1 do ${answersLength} :) `);
-            console.log(`W tej grze zdobyłeś ${xp(userLevel)}XP oraz ${Math.ceil(levels[userLevel] / 1000)}zł do wydania w sklepie.`);
+            console.log(`W tej grze zdobyłeś ${xp(userLevel-1)}XP oraz ${Math.ceil(levels[userLevel-1] / 1000)}zł do wydania w sklepie.`);
+            
             checkLevelUp();
+            readline.close();
             return;
         }
 
-        const a = question.answers[answerInt-1];
+        if(userAnswerInt != question.correct) {
+            editJson("user/info.json", "money", Math.ceil(levels[userLevel-1] / 1000), "+");
+            editJson("user/info.json", "xp", xp(userLevel-1), "+");
+            console.log(`Przykro nam, lecz przegrałeś grę. Prawidłowa odpowiedź to: ${question.correct}. Zabierasz ze sobą ${levels[userLevel-1]}zł.`);
+            console.log(`W tej grze zdobyłeś ${xp(userLevel-1)}XP oraz ${Math.ceil(levels[userLevel-1] / 1000)}zł do wydania w sklepie.`);
 
-        if(a != question.correct) {
-            editJson("user/info.json", "money", Math.ceil(levels[userLevel] / 1000), "+");
-            editJson("user/info.json", "xp", xp(userLevel), "+");
-            console.log(`Przykro nam, lecz przegrałeś grę. Prawidłowa odpowiedź to: ${question.correct}. Zabierasz ze sobą ${levels[userLevel]}zł, gratulacje!`);
-            console.log(`W tej grze zdobyłeś ${xp(userLevel)}XP oraz ${Math.ceil(levels[userLevel] / 1000)}zł do wydania w sklepie.`);
             checkLevelUp();
+            readline.close();
             return;
         }
 
-        if(userLevel == 12) {
+        if(userLevel == 11) {
             editJson("user/info.json", "money", 1000, "+");
             editJson("user/info.json", "xp", xp(userLevel), "+");
             editJson("user/stats.json", "wins", 1, "+");
             console.log("GRATULACJE! Wygrałeś MILION złotych!");
             console.log(`Za wygraną otrzymujesz 1000zł do wydania w sklepie gry oraz ${xp(userLevel)} XP.`);
+
             checkLevelUp();
+            readline.close()
         } else {
             console.log("Dokładnie tak! To prawidłowa odpowiedź! Grajmy dalej!");
             userLevel++;
-            setTimeout( () => {
+            setTimeout(() => {
                 showQuestion();
-            }, 3000)
+            }, 1500)
         }
-    });
+    })
 }
 
 

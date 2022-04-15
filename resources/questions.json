@@ -2,61 +2,61 @@
     {
         "question": "O której godzinie zmarł Jan Paweł II?",
         "answers": ["16:20", "04:20", "23:47", "21:37"],
-        "correct": "21:37"
+        "correct": 4
     },
     {
         "question": "Kiedy została rozpoznana choroba COVID-19?",
         "answers": ["marzec 2020", "grudzień 2019", "luty 2020", "listopad 2019"],
-        "correct": "listopad 2019"
+        "correct": 4
     },
     {
         "question": "Który z poniżej wymienionych miesięcy ma 28 dni?",
         "answers": ["marzec", "sierpień", "grudzień", "luty", "styczeń"],
-        "correct": "luty"
+        "correct": 4
     },
     {
         "question": "Kto jest głównym bohaterem serialu \"Świat według Kiepskich\"?",
         "answers": ["Ferdynand Kiepski", "Mariola Kiepska", "Janusz Paździoch", "Jolanta Kiepska"],
-        "correct": "Ferdynand Kiepski"
+        "correct": 1
     },
     {
         "question": "Kiedy została założona firma Google (Google LLC)?",
         "answers": ["17 marca 2001", "30 maja 1997", "4 września 1998", "21 grudnia 1995"],
-        "correct": "4 września 1998"
+        "correct": 3
     },
     {
         "question": "W języku programowania \"Java\" znaki '' odpowiadają za:",
         "answers": ["String", "Character", "Number", "To nie ma znaczenia"],
-        "correct": "Character"
+        "correct": 2
     },
     {
         "question": "Znany YouTuber \"Konopskyy\" oskarżył \"Leksia\" o:",
         "answers": ["Bycie pedofilem", "Okradanie widzów", "Promowanie scamów", "Taka sytuacja nigdy nie miała miejsca"],
-        "correct": "Bycie pedofilem"
+        "correct": 1
     },
     {
         "question": "Kto został prezydentem Polski 23 grudnia 2005?",
         "answers": ["Andrzej Duda", "Lech Kaczyński", "Bronisław Komorowski", "Przemysław Czarnek"],
-        "correct": "Lech Kaczyński"
+        "correct": 2
     },
     {
         "question": "Kim jest Przemysław Czarnek (na 13.04.2022r.)?",
         "answers": ["Premierem Polski", "Ministrem Edukacji i Nauki", "Ministrem Sportu", "Ministrem Zdrowia"],
-        "correct": "Ministrem Edukacji i Nauki"
+        "correct": 2
         },
     {
         "question": "Kto sprawował urząd premiera Polski w roku 2020?",
         "answers": ["Andrzej Duda", "Mateusz Morawiecki", "Zbigniew Ziobro", "Adam Niedzielski"],
-        "correct": "Mateusz Morawiecki"
+        "correct": 2
     },
     {
         "question": "Na co Jacek Sasin wydał 70 milionów złotych?",
         "answers": ["na wybory, które się nie odbyły", "na rękawiczki dla medyków", "na respiratory", "na 500+"],
-        "correct": "na wybory, które się nie odbyły"
+        "correct": 1
     },
     {
         "question": "Partia Polityczna \"Prawo i Sprawiedliwość\" została założona:",
         "answers": ["29 maja 1999", "11 kwietnia 2003", "29 maja 2001", "1 marca 2002"],
-        "correct": "29 maja 2001"
+        "correct": 3
     }
 ]
