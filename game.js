@@ -1,7 +1,6 @@
 const questions = require("./resources/questions.json");
 const levels = require("./resources/levels.json");
 const info = require("./user/info.json");
-const c = require("./resources/program-config.js");
 const editJson = require("./resources/functions/editJson.js");
 const xpToLevel = require("./resources/functions/xpToLevel.js");
 const xp = require("./resources/functions/xp.js");
@@ -20,6 +19,7 @@ module.exports = {
 
 function showQuestion() {
     let q = getQuestion();
+    console.clear()
     console.log(chalk.cyan(`Pytanie za ${levels[userLevel]}zł: ${q.question}`));
     let n = 1;
     q.answers.forEach(answer => {
@@ -58,7 +58,9 @@ function showQuestion() {
                 else {
                     console.log("Dokładnie tak! To prawidłowa odpowiedź! Grajmy dalej!");
                     userLevel++;
-                    showQuestion();
+                    setTimeout( () => {
+                        showQuestion();
+                    }, 3000)
                 };
             };
         }
