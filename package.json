@@ -9,6 +9,7 @@
   "author": "xKubsoneQ",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^4.1.2"
+    "chalk": "^4.1.2",
+    "fs": "^0.0.1-security"
   }
 }

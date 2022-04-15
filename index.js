@@ -1,53 +1,52 @@
-const questions = require("./files/questions.json");
-const levels = require("./files/levels.json");
-const c = require("./files/program-config.js");
-const readline = require('readline').createInterface({input: process.stdin, output: process.stdout});
 const chalk = require("chalk");
-let userLevel = 1;
+const fs = require('fs');
+const readline = require('readline').createInterface({input: process.stdin, output: process.stdout});
+const c = require("./resources/program-config.js");
+const editJson = require("./resources/functions/editJson.js");
 
-const qa = [];
+console.clear();
+console.log(chalk.magenta(`milionerzy-js, wersja v${c.version}.`));
 
-console.log(chalk.blue(`milionerzy-js, wersja v${c.version}. Miłej gry!\n\n`));
-showQuestion();
-
-
-function showQuestion() {
-    let q = getQuestion();
-    console.log(chalk.cyan(`Pytanie za ${levels[userLevel]}zł: ${q.question}`));
-    let n = 1;
-    q.answers.forEach(answer => {
-        console.log(chalk.red(`${n++}. `) + chalk.green(`${answer}`));
-    });
-
-    readline.question(chalk.magenta(`Wybierz odpowiedź (1-${q.answers.length}): `), userAnswer => {
-        const answers = q.answers.length;
-        const answerint = parseInt(userAnswer);
-        if(answerint > answers || answerint < 1 || isNaN(answerint)) {
-            readline.close();
-            return console.log(`No cóź... Przegrałeś. Wiedziałeś, że wpisujesz złą odpowiedź, miałeś wpisać liczbę od 1 do ${q.answers.length} :) `);
-        }
-        else {
-            const an = parseInt(userAnswer);
-            const a = q.answers[an-1];
-            if(a != q.correct) return console.log(`Przykro nam, lecz przegrałeś grę. Prawidłowa odpowiedź to: ${q.correct}. Zabierasz ze sobą ${levels[userLevel]}zł, gratulacje!`);
-            else {
-                if(userLevel == 12) return console.log("GRATULACJE! Wygrałeś MILION złotych!");
-                else {
-                    console.log("Dokładnie tak! To prawidłowa odpowiedź! Grajmy dalej!");
-                    userLevel++;
-                    showQuestion();
-                };
-            };
-        }
-    });
-}
-
-function getQuestion() {
-    const random = Math.floor(Math.random() * Object.keys(questions).length);
-    if(qa.includes(random)) {
-        return getQuestion();
+if(!fs.existsSync("./user/info.json")) {
+    let json = {
+        money: 0,
+        level: 1,
+        xp: 0
     }
-    qa.push(random);
-    const question = questions[random];
-    return question;
+    json = JSON.stringify(json, null, 2);
+    fs.writeFile('./user/info.json', json, (err) => {
+        if(err) throw new Error("Nie udało się utworzyć pliku z danymi użytkownika!");
+    });
 }
+
+if(!fs.existsSync("./user/stats.json")) {
+    let json = {
+        wins: 0
+    }
+    json = JSON.stringify(json, null, 2);
+    fs.writeFile('./user/stats.json', json, (err) => {
+        if(err) throw new Error("Nie udało się utworzyć pliku ze statystykami użytkownika!");
+    });
+}
+
+
+
+console.log(chalk.red("1. ") + chalk.blue("Rozpocznij grę!"));
+console.log(chalk.red("2. ") + chalk.blue("Sprawdź mój profil!"));
+console.log(chalk.red.bold("Sklep pojawi się w grze wkrótce!"));
+// console.log(chalk.red("3. ") + chalk.blue("Zajrzyj do sklepu!"));
+console.log(chalk.blue("Inna odpowiedź - wyjście z gry."));
+readline.question("Więc, co robimy?: ", answer => {
+    if(answer == "1") {
+        readline.close();
+        require("./game.js").execute();
+    } else if(answer == "2") {
+        readline.close();
+        require("./profile.js").execute();
+    /* } else if(answer == "3") {
+    //     readline.close();
+    //     require("./shop.js").execute();
+    */ } else {
+        process.exit(0);
+    }
+})
