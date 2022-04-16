@@ -1,5 +1,4 @@
 const info = require("./user/info.json");
-const stats = require("./user/stats.json");
 const chalk = require("chalk");
 
 console.log(`\nPieniądze: ${info.money}zł (Każdy 1000zł wygrany w grze = 1zł do użycia w sklepie)`);
