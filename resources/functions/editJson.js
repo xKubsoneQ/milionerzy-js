@@ -5,6 +5,8 @@ module.exports = (file, variable, value, type) => {
     
     if(type == "+") {
         f[variable] += value;
+    } else if(type == "-") {
+        f[variable] -= value;
     } else f[variable] = value;
 
     fs.writeFile(`${file}`, JSON.stringify(f, null, 2), function writeJSON(err) {
