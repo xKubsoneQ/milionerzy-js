@@ -52,7 +52,7 @@ function showQuestion() {
         if(userLevel == 11) {
             editJson("user/info.json", "money", 1000, "+");
             editJson("user/info.json", "xp", xp(userLevel), "+");
-            editJson("user/stats.json", "wins", 1, "+");
+            editJson("user/info.json", "wins", 1, "+");
             console.log("GRATULACJE! Wygrałeś MILION złotych!");
             console.log(`Za wygraną otrzymujesz 1000zł do wydania w sklepie gry oraz ${xp(userLevel)} XP.`);
 
