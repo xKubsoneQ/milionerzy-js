@@ -17,17 +17,6 @@ if(!fs.existsSync("./user/info.json")) {
     });
 }
 
-if(!fs.existsSync("./user/stats.json")) {
-    let json = {
-        wins: 0
-    }
-    json = JSON.stringify(json, null, 2);
-    
-    fs.writeFile('./user/stats.json', json, (err) => {
-        if(err) throw new Error("Nie udało się utworzyć pliku ze statystykami użytkownika!");
-    });
-}
-
 console.clear();
 
 console.log(chalk.magenta(`milionerzy-js, wersja v${package.version}.`));
