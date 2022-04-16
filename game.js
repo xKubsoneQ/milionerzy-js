@@ -29,9 +29,10 @@ function showQuestion() {
 
         if(userAnswerInt > answersLength || userAnswerInt < 1 || isNaN(userAnswerInt)) {
             editJson("user/info.json", "money", Math.ceil(levels[userLevel-1] / 1000), "+");
-            editJson("user/info.json", "xp", xp(userLevel-1), "+");
+            editJson("user/info.json", "xp", xp(userLevel), "+");
+
             console.log(`No cóź... Przegrałeś. Wiedziałeś, że wpisujesz złą odpowiedź, miałeś wpisać liczbę od 1 do ${answersLength} :) `);
-            console.log(`W tej grze zdobyłeś ${xp(userLevel-1)}XP oraz ${Math.ceil(levels[userLevel-1] / 1000)}zł do wydania w sklepie.`);
+            console.log(`W tej grze zdobyłeś ${xp(userLevel)}XP oraz ${Math.ceil(levels[userLevel] / 1000)}zł do wydania w sklepie.`);
             
             checkLevelUp();
             readline.close();
@@ -39,20 +40,20 @@ function showQuestion() {
         }
 
         if(userAnswerInt != question.correct) {
-            editJson("user/info.json", "money", Math.ceil(levels[userLevel-1] / 1000), "+");
-            editJson("user/info.json", "xp", xp(userLevel-1), "+");
-            console.log(`Przykro nam, lecz przegrałeś grę. Prawidłowa odpowiedź to: ${question.correct}. Zabierasz ze sobą ${levels[userLevel-1]}zł.`);
-            console.log(`W tej grze zdobyłeś ${xp(userLevel-1)}XP oraz ${Math.ceil(levels[userLevel-1] / 1000)}zł do wydania w sklepie.`);
+            editJson("user/info.json", "money", Math.ceil(levels[userLevel] / 1000), "+");
+            editJson("user/info.json", "xp", xp(userLevel), "+");
+            console.log(`Przykro nam, lecz przegrałeś grę. Prawidłowa odpowiedź to: ${question.correct}. Zabierasz ze sobą ${levels[userLevel]}zł.`);
+            console.log(`W tej grze zdobyłeś ${xp(userLevel)}XP oraz ${Math.ceil(levels[userLevel] / 1000)}zł do wydania w sklepie.`);
 
             checkLevelUp();
             readline.close();
             return;
         }
 
-        if(userLevel == 11) {
+        if(userLevel == 12) {
             editJson("user/info.json", "money", 1000, "+");
             editJson("user/info.json", "xp", xp(userLevel), "+");
-            editJson("user/stats.json", "wins", 1, "+");
+            editJson("user/info.json", "wins", 1, "+");
             console.log("GRATULACJE! Wygrałeś MILION złotych!");
             console.log(`Za wygraną otrzymujesz 1000zł do wydania w sklepie gry oraz ${xp(userLevel)} XP.`);
 
