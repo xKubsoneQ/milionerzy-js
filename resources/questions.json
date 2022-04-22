@@ -1,62 +1,224 @@
-[
-    {
-        "question": "O której godzinie zmarł Jan Paweł II?",
-        "answers": ["16:20", "04:20", "23:47", "21:37"],
-        "correct": 4
-    },
-    {
-        "question": "Kiedy została rozpoznana choroba COVID-19?",
-        "answers": ["marzec 2020", "grudzień 2019", "luty 2020", "listopad 2019"],
-        "correct": 4
-    },
-    {
-        "question": "Który z poniżej wymienionych miesięcy ma 28 dni?",
-        "answers": ["marzec", "sierpień", "grudzień", "luty", "styczeń"],
-        "correct": 4
-    },
-    {
-        "question": "Kto jest głównym bohaterem serialu \"Świat według Kiepskich\"?",
-        "answers": ["Ferdynand Kiepski", "Mariola Kiepska", "Janusz Paździoch", "Jolanta Kiepska"],
-        "correct": 1
-    },
-    {
-        "question": "Kiedy została założona firma Google (Google LLC)?",
-        "answers": ["17 marca 2001", "30 maja 1997", "4 września 1998", "21 grudnia 1995"],
-        "correct": 3
-    },
-    {
-        "question": "W języku programowania \"Java\" znaki '' odpowiadają za:",
-        "answers": ["String", "Character", "Number", "To nie ma znaczenia"],
-        "correct": 2
-    },
-    {
-        "question": "Znany YouTuber \"Konopskyy\" oskarżył \"Leksia\" o:",
-        "answers": ["Bycie pedofilem", "Okradanie widzów", "Promowanie scamów", "Taka sytuacja nigdy nie miała miejsca"],
-        "correct": 1
-    },
-    {
-        "question": "Kto został prezydentem Polski 23 grudnia 2005?",
-        "answers": ["Andrzej Duda", "Lech Kaczyński", "Bronisław Komorowski", "Przemysław Czarnek"],
-        "correct": 2
-    },
-    {
-        "question": "Kim jest Przemysław Czarnek (na 13.04.2022r.)?",
-        "answers": ["Premierem Polski", "Ministrem Edukacji i Nauki", "Ministrem Sportu", "Ministrem Zdrowia"],
-        "correct": 2
+{
+    "ogolna": [
+        {
+            "question": "O której godzinie zmarł Jan Paweł II?",
+            "answers": ["16:20", "04:20", "23:47", "21:37"],
+            "correct": 4
         },
-    {
-        "question": "Kto sprawował urząd premiera Polski w roku 2020?",
-        "answers": ["Andrzej Duda", "Mateusz Morawiecki", "Zbigniew Ziobro", "Adam Niedzielski"],
-        "correct": 2
-    },
-    {
-        "question": "Na co Jacek Sasin wydał 70 milionów złotych?",
-        "answers": ["na wybory, które się nie odbyły", "na rękawiczki dla medyków", "na respiratory", "na 500+"],
-        "correct": 1
-    },
-    {
-        "question": "Partia Polityczna \"Prawo i Sprawiedliwość\" została założona:",
-        "answers": ["29 maja 1999", "11 kwietnia 2003", "29 maja 2001", "1 marca 2002"],
-        "correct": 3
-    }
-]
+        {
+            "question": "Kiedy została rozpoznana choroba COVID-19?",
+            "answers": ["marzec 2020", "grudzień 2019", "luty 2020", "listopad 2019"],
+            "correct": 4
+        },
+        {
+            "question": "Który z poniżej wymienionych miesięcy ma 28 dni?",
+            "answers": ["grudzień", "luty", "styczeń", "wszystkie"],
+            "correct": 4
+        },
+        {
+            "question": "Wojna pomiędzy Ukrainą a Rosją rozpoczęła się:",
+            "answers": ["13 luty 2022", "30 luty 2022", "24 luty 2022", "21 luty 2022"],
+            "correct": 3
+        },
+        {
+            "question": "Co oznacza skrót \"rel\"?",
+            "answers": ["coś, z czym możesz się utożsamić", "coś, co jest prawdziwe", "używa się go gdy rozmówca powie coś głupiego, i nie wiesz jakt to skomentować", "używane gdy ktoś powie coś smutnego, i nie wiesz co powiedzieć"],
+            "correct": 1
+        },
+        {
+            "question": "Firma LEGO zajmuje się:",
+            "answers": ["Tworzeniem figur woskowych", "Tworzeniem klocków do budowania", "Tworzeniem gier", "Produkowaniem chrupków kukurydzianych"],
+            "correct": 2
+        },
+        {
+            "question": "Jak rozpoczyna się słynna inwokacja z \"Pana Tadeusza\"?",
+            "answers": ["Litwo! Ojczyzno moja! Ty jesteś jak zdrowie. Ile cię trzeba cenić, ten tylko się dowie...", "Polsko! Ojczyzno moja! Ty jesteś jak zdrowie. Ile cię trzeba cenić, ten tylko się dowie...", "Litwo! Ojczyzno moja! Ty jesteś jak kwiat na polnej drodze. Ile trzeba patrzeć, ten tylko się dowie...", "Litwo! Ojczyzno moja! Ty jesteś jak zdrowie, ile cię trzeba cenić, on tylko się dowie..."],
+            "correct": 1
+        },
+        {
+            "question": "Jak nazywa się \"Polski Facebook\"?",
+            "answers": ["Polbook", "Albicla", "PolishBook", "Polbicla"],
+            "correct": 2
+        },
+        {
+            "question": "Która z poniżej wymienionych lektur NIE jest lekturą obowiązkową (lecz wciąż MOŻNA się do niej odwołać) na Egzamin Ósmoklasisty?",
+            "answers": ["Charles Dickens, Opowieść wigilijna", "Stefan Żeromski, Syzyfowe prace", "Antoine de Saint-Exupéry, Mały Książę", "Juliusz Słowacki, Balladyna"],
+            "correct": 2
+        },
+        {
+            "question": "Ile książek z serii \"Harry Potter\" zostało wydane?",
+            "answers": ["5", "10", "8", "7"],
+            "correct": 4
+        },
+        {
+            "question": "W jakiej serii książek pojawił się \"Bilbo Baggins\"?",
+            "answers": ["Harry Potter", "Hobbit", "Władca Pierścieni", "Hobbit i Władca Pierścieni"],
+            "correct": 4
+        },
+        {
+            "question": "Niebieski ptak - jakiego portalu społecznościowego jest to logo?",
+            "answers": ["Facebook", "Instagram", "Twitter", "Albicla"],
+            "correct": 3
+        },
+        {
+            "question": "Wybierz znaczenie angielskiego skrótu \"idk\".",
+            "answers": ["Nie wiem", "Nie powiedziałem tak", "On to zrobi", "Po co"],
+            "correct": 1
+        }
+    ],
+
+
+    "seriale": [
+        {
+            "question": "Kto jest głównym bohaterem serialu \"Świat według Kiepskich\"?",
+            "answers": ["Ferdynand Kiepski", "Mariola Kiepska", "Janusz Paździoch", "Jolanta Kiepska"],
+            "correct": 1
+        }
+    ],
+
+
+    "polityka": [
+        {
+            "question": "Partia Polityczna \"Prawo i Sprawiedliwość\" została założona:",
+            "answers": ["29 maja 1999", "11 kwietnia 2003", "29 maja 2001", "1 marca 2002"],
+            "correct": 3
+        },
+        {
+            "question": "Na co Jacek Sasin wydał 70 milionów złotych?",
+            "answers": ["na wybory, które się nie odbyły", "na rękawiczki dla medyków", "na respiratory", "na 500+"],
+            "correct": 1
+        },
+        {
+            "question": "Kto sprawował urząd premiera Polski w roku 2020?",
+            "answers": ["Andrzej Duda", "Mateusz Morawiecki", "Zbigniew Ziobro", "Adam Niedzielski"],
+            "correct": 2
+        },
+        {
+            "question": "Kim jest Przemysław Czarnek (na 13.04.2022r.)?",
+            "answers": ["Premierem Polski", "Ministrem Edukacji i Nauki", "Ministrem Sportu", "Ministrem Zdrowia"],
+            "correct": 2
+        },
+        {
+            "question": "Kto został prezydentem Polski 23 grudnia 2005?",
+            "answers": ["Andrzej Duda", "Lech Kaczyński", "Bronisław Komorowski", "Przemysław Czarnek"],
+            "correct": 2
+        }
+    ],
+
+
+    "technologia": [
+        {
+            "question": "Kiedy została założona firma Google (Google LLC)?",
+            "answers": ["17 marca 2001", "30 maja 1997", "4 września 1998", "21 grudnia 1995"],
+            "correct": 3
+        },
+        {
+            "question": "W języku programowania \"Java\" znaki '' odpowiadają za:",
+            "answers": ["String", "Character", "Number", "To nie ma znaczenia"],
+            "correct": 2
+        }
+    ],
+
+
+    "youtube": [
+        {
+            "question": "Znany YouTuber \"Konopskyy\" oskarżył \"Leksia\" o:",
+            "answers": ["Bycie pedofilem", "Okradanie widzów", "Promowanie scamów", "Taka sytuacja nigdy nie miała miejsca"],
+            "correct": 1
+        },
+        {
+            "question": "Który z poniżej przedstawionych zestawów odpowiedzi zawiera YouTuberów którzy mają (lub mieli) współpracę z firmą GBS?",
+            "answers": ["Nitro, Kasix, Remsua", "Konopskyy, Nitro, Zebo", "Zebo, Mandzio, Multi"],
+            "correct": 2
+        },
+        {
+            "question": "7more7: czyj to merch?",
+            "answers": ["Wardęga", "Takefun", "Nitro", "Izak"],
+            "correct": 3
+        },
+        {
+            "question": "Z jakim streamerem mieszka streamerka Kasix?",
+            "answers": ["Mandzio", "Remsua", "Ewron", "Nexe"],
+            "correct": 2
+        },
+        {
+            "question": "Kto prowadzi kanał Pokój Wytrzeźwień?",
+            "answers": ["Marcin", "Konrad", "Kuba", "Dawid"],
+            "correct": 4
+        },
+        {
+            "question": "Jaki tytuł ma książka autorstwa DeeJayPallaside?",
+            "answers": ["Paranormal", "Paranormalne Historie", "Paranormalne Przygody", "Straszne Historie"],
+            "correct": 4
+        },
+        {
+            "question": "Bluperia: czyj to merch?",
+            "answers": ["Wardęga", "Revo", "Remsua", "DeeJayPallaside"],
+            "correct": 3
+        },
+        {
+            "question": "Tomasz \"Gimper\" Działowy udzielił wywiadu w którym była mowa o Revo, materiał ten wywołał burzę w sieci. Pojawił się on na YouTube pod tytułem:",
+            "answers": ["GIMPER: REVO PUCUJE WARDĘDZE P*ŁĘ!", "GIMPER: CZY REVO JEST STRONNICZY?", "GIMPER OSTRO O REVO!", "GIMPER: Revo to YouTubowy syn Wardęgi!"],
+            "correct": 1
+        },
+        {
+            "question": "Jakie imię ma Nolif po zmianie płci?",
+            "answers": ["Kasia", "Magda", "Małgosia", "Natalia"],
+            "correct": 4
+        },
+        {
+            "question": "Jak wyglądała droga Young Multiego w internecie?",
+            "answers": ["YouTuber -> Raper -> Streamer", "Raper -> YouTuber -> Streamer", "Streamer -> YouTuber -> Raper", "YouTuber -> Raper -> Streamer i raper"],
+            "correct": 4
+        },
+        {
+            "question": "Który z zestawów odpowiedzi zawiera osoby, które miały dramę z Telewizją Polską?",
+            "answers": ["Sylwester Wardęga, Dominik Bos", "Mandzio, Sylwester Wardęga", "Mateusz Spysiński, Mandzio", "Mateusz Spysiński, Sylwester Wardęga"],
+            "correct": 1
+        },
+        {
+            "question": "Main eventem na FameMMA 13 była walka Nitro vs Unboxall, kto wygrał walkę?",
+            "answers": ["Nitro", "Unboxall", "Był remis", "Walka skończyła się wcześniej, bez wygranego"],
+            "correct": 2
+        }
+    ],
+
+
+    "polski_rap": [
+        {
+            "question": "Komu Paluch blokował koncerty?",
+            "answers": ["Multiemu", "Chivasowi", "Szpakowi", "Janowi-Rapowanie"],
+            "correct": 1
+        },
+        {
+            "question": "W którym roku zostały wydane albumy \"0,25mg\" oraz \"Soma 0,5mg\" duetu Taconafide?",
+            "answers": ["2016", "2017", "2018", "2019"],
+            "correct": 3
+        },
+        {
+            "question": "Który label jest największy pod względem subskrybcji (stan na 16.04.2022r.)?",
+            "answers": ["SBM Label", "QueQuality", "2020", "Step Records"],
+            "correct": 4
+        },
+        {
+            "question": "Komu został sprzedany stary utwór Quebonafide: \"Benz-Dealer\"?",
+            "answers": ["SBM Label", "Kupił go sam Quebonafide", "Jednemu z zagranicznych producentów", "Nie został sprzedany"],
+            "correct": 1
+        },
+        {
+            "question": "Pewna miejscowość wyprodukowała kalendarze z Kościołem pw. św...",
+            "answers": ["Bedoesa", "Solara", "Białasa", "Lanka"],
+            "correct": 1
+        },
+        {
+            "question": "\"I nie stać mnie na refren od Sentino, yo\" - który raper nawinął ten wers?",
+            "answers": ["Jan-Rapowanie", "Quebonafide", "Taco Hemingway", "CatchUp"],
+            "correct": 2
+        },
+        {
+            "question": "Z kim kolaborował Sentino podczas tworzenia utworu \"Trójkąt Bermudzki\"?",
+            "answers": ["Nitro, Masny Ben", "Masny Ben, młody klakson", "Nitro, młody klakson", "mgng"],
+            "correct": 1
+        }
+    ]
+}
