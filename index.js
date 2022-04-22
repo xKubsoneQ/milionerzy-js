@@ -8,7 +8,9 @@ if(!fs.existsSync("./user/info.json")) {
     let json = {
         money: 0,
         level: 1,
-        xp: 0
+        xp: 0,
+        wins: 0,
+        money_earned_ingame: 0
     }
     json = JSON.stringify(json, null, 2);
 
@@ -18,24 +20,62 @@ if(!fs.existsSync("./user/info.json")) {
 }
 
 console.clear();
-
+    
 console.log(chalk.magenta(`milionerzy-js, wersja v${package.version}.`));
 console.log(chalk.red("1. ") + chalk.blue("Rozpocznij grę!"));
 console.log(chalk.red("2. ") + chalk.blue("Sprawdź mój profil!"));
-console.log(chalk.red.bold("Sklep pojawi się w grze wkrótce!")); // console.log(chalk.red("3. ") + chalk.blue("Zajrzyj do sklepu!"));
+console.log(chalk.red("3. ") + chalk.blue("Zajrzyj do sklepu!"));
 console.log(chalk.blue("Inna odpowiedź - wyjście z gry."));
+        
+
+//czemu readline to taki syf?
 
 readline.question("Więc, co robimy?: ", answer => {
     readline.close();
-
+        
     switch(answer) {
-        case "1":
-            require("./game.js");
-            break;
-        case "2":
-            require("./profile.js");
-            break;
-        default:
-            process.exit();
+    case "1":
+        require("./game.js");
+        break;
+    case "2":
+        require("./profile.js");
+        break;
+    case "3":
+        require("./shop.js");
+    break;
+    default:
+        process.exit();
     }
-})
+});
+
+
+
+module.exports = {
+    showMenu() {
+        console.clear();
+    
+        console.log(chalk.magenta(`milionerzy-js, wersja v${package.version}.`));
+        console.log(chalk.red("1. ") + chalk.blue("Rozpocznij grę!"));
+        console.log(chalk.red("2. ") + chalk.blue("Sprawdź mój profil!"));
+        console.log(chalk.red("3. ") + chalk.blue("Zajrzyj do sklepu!"));
+        console.log(chalk.blue("Inna odpowiedź - wyjście z gry."));
+        
+        readline.question("Więc, co robimy?: ", answer => {
+            readline.close();
+            switch(answer) {
+                case "1":
+                    require("./game.js");
+                    break;
+                case "2":
+                    require("./profile.js");
+                    break;
+                case "3":
+                    require("./shop.js");
+                    break;
+                default:
+                    process.exit();
+            }
+        })
+        
+    }
+}
