@@ -1,6 +1,7 @@
 const readline = require('readline').createInterface({input: process.stdin, output: process.stdout});
 const chalk = require("chalk");
 const questions = require("./resources/questions.json");
+const questionPacks = require("./user/questionPacks.json");
 const levels = require("./resources/levels.json");
 const info = require("./user/info.json");
 const editJson = require("./resources/functions/editJson.js");
@@ -16,11 +17,11 @@ function showQuestion() {
     console.clear();
 
     const question = getQuestion();
-    const answersLength = question.answers.length;
+    const answersLength = question[1].answers.length;
     let answerIterator = 1;
 
-    console.log(chalk.cyan(`Pytanie za ${levels[userLevel]}zł: ${question.question}`));
-    question.answers.forEach(answer => {
+    console.log(chalk.cyan(`Pytanie za ${levels[userLevel]}zł (Kategoria: ${question[0]}): ${question[1].question}`));
+    question[1].answers.forEach(answer => {
         console.log(chalk.red(`${answerIterator++}. `) + chalk.green(`${answer}`));
     });
 
@@ -39,10 +40,10 @@ function showQuestion() {
             return;
         }
 
-        if(userAnswerInt != question.correct) {
+        if(userAnswerInt != question[1].correct) {
             editJson("user/info.json", "money", Math.ceil(levels[userLevel] / 1000), "+");
             editJson("user/info.json", "xp", xp(userLevel), "+");
-            console.log(`Przykro nam, lecz przegrałeś grę. Prawidłowa odpowiedź to: ${question.correct}. Zabierasz ze sobą ${levels[userLevel]}zł.`);
+            console.log(`Przykro nam, lecz przegrałeś grę. Prawidłowa odpowiedź to: ${question[1].correct}. Zabierasz ze sobą ${levels[userLevel]}zł.`);
             console.log(`W tej grze zdobyłeś ${xp(userLevel)}XP oraz ${Math.ceil(levels[userLevel] / 1000)}zł do wydania w sklepie.`);
 
             checkLevelUp();
@@ -71,11 +72,17 @@ function showQuestion() {
 
 
 function getQuestion() {
-    const random = Math.floor(Math.random() * Object.keys(questions).length);
-    if(questionsAnswered.includes(random)) return getQuestion();
+    const packs = [];
+    Object.keys(questionPacks).forEach(pack => {
+        if(questionPacks[pack] == true) packs.push(pack);
+    });
 
-    questionsAnswered.push(random);
-    return questions[random];
+    const pack = packs[Math.floor(Math.random() * packs.length)];
+    const random = Math.floor(Math.random() * Object.keys(questions[pack]).length);
+    if(questionsAnswered.includes(pack[random])) return getQuestion();
+
+    questionsAnswered.push(questions[pack][random]);
+    return [ pack, questions[pack][random] ];
 }
 
 
