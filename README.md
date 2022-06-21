@@ -1,4 +1,5 @@
 ### milionerzy-js
+---
 Gra, podczas której tworzenia wzorowałem się na formacie popularnego teleturnieju "Milionerzy". Program wymaga pobrania `Node.JS` oraz `npm`.
 
 #### Pobranie
