@@ -3,7 +3,7 @@
 Gra, podczas której tworzenia wzorowałem się na formacie popularnego teleturnieju "Milionerzy". Program wymaga pobrania `Node.JS` oraz `npm`.
 
 #### Pobranie
-Najprostszą metodą na pobranie gry jest kliknięcie zielonego przycisku "Code" po czym "Download ZIP". Inne sposoby to sklonowanie projektu za pomocą Gita lub wybranie wersji w zakładce "Releases" i pobranie kodu stamtąd.
+Najprostszą metodą na pobranie gry jest kliknięcie zielonego przycisku "Code" po czym "Download ZIP" (pobierasz wtedy **najnowszą dostępną** wersje, co oznacza że **nie musi** ona być stabilna). Inne sposoby to sklonowanie projektu za pomocą Gita lub wybranie wersji w zakładce "Releases" i pobranie kodu stamtąd (można wtedy pobrać np. najnowszą stabilną wersję).
 
 #### Uruchomienie
 Wpisz `npm i` w konsoli (musisz być w folderze z projektem) aby pobrać wszystkie wymagane moduły.
